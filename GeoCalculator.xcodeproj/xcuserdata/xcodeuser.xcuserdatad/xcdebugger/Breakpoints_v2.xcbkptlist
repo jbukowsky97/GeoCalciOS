@@ -2,4 +2,131 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeoCalculator/ViewController.swift"
+            timestampString = "531084163.189219"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeoCalculator/ViewController.swift"
+            timestampString = "531081678.303298"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoCalculator.ViewController.__deallocating_deinit"
+                  moduleName = "GeoCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcodeuser/Documents/GeoCalciOS/GeoCalculator/ViewController.swift"
+                  timestampString = "531082814.369771"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoCalculator.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; GeoCalculator.ViewController"
+                  moduleName = "GeoCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcodeuser/Documents/GeoCalciOS/GeoCalculator/ViewController.swift"
+                  timestampString = "531082814.371474"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoCalculator.ViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; GeoCalculator.ViewController"
+                  moduleName = "GeoCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcodeuser/Documents/GeoCalciOS/GeoCalculator/ViewController.swift"
+                  timestampString = "531082814.373153"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoCalculator.ViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;GeoCalculator.ViewController&gt;"
+                  moduleName = "GeoCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcodeuser/Documents/GeoCalciOS/GeoCalculator/ViewController.swift"
+                  timestampString = "531082814.374754"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoCalculator.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;GeoCalculator.ViewController&gt;"
+                  moduleName = "GeoCalculator"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xcodeuser/Documents/GeoCalciOS/GeoCalculator/ViewController.swift"
+                  timestampString = "531082814.376819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeoCalculator/HistoryTableViewController.swift"
+            timestampString = "531083355.91358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, HistoryViewControllerDelegate {
 
     @IBOutlet weak var p1Lat: DecimalMinusTextField!
     @IBOutlet weak var p1Lng: DecimalMinusTextField!
@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     
     var distanceUnits : String = "Kilometers"
     var bearingUnits : String = "Degrees"
+    
+    var entries : [LocationLookup] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,8 @@ class ViewController: UIViewController {
         let p2 = CLLocation(latitude: p2lt, longitude: p2ln)
         let distance = p1.distance(from: p2)
         let bearing = p1.bearingToPoint(point: p2)
+        
+        entries.append(LocationLookup(origLat: p1lt, origLng: p1ln, destLat: p2lt, destLng: p2ln, timestamp: Date()))
         
         if distanceUnits == "Kilometers" {
             self.distanceLabel.text = "Distance: \((distance / 10.0).rounded() / 100.0) kilometers"
@@ -66,6 +70,18 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    func historyUpdate(entries: [LocationLookup]) {
+    }
+    
+    func selectEntry(entry: LocationLookup) {
+        self.p1Lat.text = String(entry.origLat)
+        self.p1Lng.text = String(entry.origLng)
+        self.p2Lat.text = String(entry.destLat)
+        self.p2Lng.text = String(entry.destLng)
+        doCalculatations()
+        self.view.endEditing(true)
+    }
+    
 
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         self.p1Lat.text = ""
@@ -79,9 +95,15 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "settingsSegue" {
-            if let dest = segue.destination.childViewControllers[0] as? SettingsViewController {
+            if let dest = segue.destination as? SettingsViewController {
                 dest.dUnits = self.distanceUnits
                 dest.bUnits = self.bearingUnits
+                dest.delegate = self
+            }
+        }
+        if segue.identifier == "historySegue" {
+            if let dest = segue.destination as? HistoryTableViewController {
+                dest.entries = entries
                 dest.delegate = self
             }
         }

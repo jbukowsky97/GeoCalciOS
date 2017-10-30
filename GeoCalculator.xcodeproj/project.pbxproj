@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33164FB01FA7A10C00AC78FA /* LocationSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33164FAF1FA7A10C00AC78FA /* LocationSwift.swift */; };
+		33164FB61FA7A80F00AC78FA /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33164FB51FA7A80F00AC78FA /* HistoryTableViewController.swift */; };
 		3353D23A1F955D310030D2C3 /* GeoCalcTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D2391F955D310030D2C3 /* GeoCalcTextField.swift */; };
 		3353D23C1F9560040030D2C3 /* GeoCalcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D23B1F9560040030D2C3 /* GeoCalcLabel.swift */; };
 		3353D23E1F95606B0030D2C3 /* GeoCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D23D1F95606B0030D2C3 /* GeoCalcButton.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33164FAF1FA7A10C00AC78FA /* LocationSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSwift.swift; sourceTree = "<group>"; };
+		33164FB51FA7A80F00AC78FA /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		3353D2391F955D310030D2C3 /* GeoCalcTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCalcTextField.swift; sourceTree = "<group>"; };
 		3353D23B1F9560040030D2C3 /* GeoCalcLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCalcLabel.swift; sourceTree = "<group>"; };
 		3353D23D1F95606B0030D2C3 /* GeoCalcButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCalcButton.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				3353D2391F955D310030D2C3 /* GeoCalcTextField.swift */,
 				3353D23B1F9560040030D2C3 /* GeoCalcLabel.swift */,
 				3353D23D1F95606B0030D2C3 /* GeoCalcButton.swift */,
+				33164FAF1FA7A10C00AC78FA /* LocationSwift.swift */,
+				33164FB51FA7A80F00AC78FA /* HistoryTableViewController.swift */,
 			);
 			path = GeoCalculator;
 			sourceTree = "<group>";
@@ -295,9 +301,11 @@
 				9EDE88121E36AF3800C2F900 /* DecimalMinusTextField.swift in Sources */,
 				9EDE88141E36B02700C2F900 /* CLLocationExtensions.swift in Sources */,
 				3353D23A1F955D310030D2C3 /* GeoCalcTextField.swift in Sources */,
+				33164FB61FA7A80F00AC78FA /* HistoryTableViewController.swift in Sources */,
 				9EDE87E61E36AC2C00C2F900 /* ViewController.swift in Sources */,
 				9EC2C62F1E4A690B009BC940 /* SettingsViewController.swift in Sources */,
 				3353D23C1F9560040030D2C3 /* GeoCalcLabel.swift in Sources */,
+				33164FB01FA7A10C00AC78FA /* LocationSwift.swift in Sources */,
 				9EDE87E41E36AC2C00C2F900 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
