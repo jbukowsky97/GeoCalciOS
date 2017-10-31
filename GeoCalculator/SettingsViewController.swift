@@ -89,7 +89,7 @@ class SettingsViewController: UIViewController {
     */
 
     @IBAction func cancelPressed(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     @IBAction func savePressed(_ sender: UIBarButtonItem) {
@@ -97,7 +97,7 @@ class SettingsViewController: UIViewController {
         if let del = self.delegate {
             del.settingsChanged(distanceUnits: self.dUnits!, bearingUnits: self.bUnits!)
         }
-        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }
     
 }

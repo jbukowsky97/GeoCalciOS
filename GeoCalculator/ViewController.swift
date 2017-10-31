@@ -22,7 +22,9 @@ class ViewController: UIViewController, HistoryViewControllerDelegate {
     var distanceUnits : String = "Kilometers"
     var bearingUnits : String = "Degrees"
     
-    var entries : [LocationLookup] = []
+    var entries : [LocationLookup] = [
+        LocationLookup(origLat: 90.0, origLng: 0.0, destLat: -90.0, destLng: 0.0, timestamp: Date.distantPast),
+        LocationLookup(origLat: -90.0, origLng: 0.0, destLat: 90.0, destLng: 0.0, timestamp: Date.distantFuture)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,7 +106,7 @@ class ViewController: UIViewController, HistoryViewControllerDelegate {
         if segue.identifier == "historySegue" {
             if let dest = segue.destination as? HistoryTableViewController {
                 dest.entries = entries
-                dest.delegate = self
+                dest.historyDelegate = self
             }
         }
     }
