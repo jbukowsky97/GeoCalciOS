@@ -8,6 +8,7 @@
 
 import UIKit
 import GooglePlaces
+import Firebase
 
 let GOOGLE_PLACES_API_KEY = "AIzaSyD3UFaWyuCq-VOxKPTHV2GOwYBuzB9YW-I"
 
@@ -30,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navAppearance.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
         GMSPlacesClient.provideAPIKey(GOOGLE_PLACES_API_KEY)
+        
+        FirebaseApp.configure()
         
         return true
     }

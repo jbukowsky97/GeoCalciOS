@@ -8,9 +8,12 @@
 
 import UIKit
 import CoreLocation
+import FirebaseDatabase
 
 class ViewController: UIViewController, HistoryViewControllerDelegate {
 
+    fileprivate var ref : DatabaseReference?
+    
     @IBOutlet weak var p1Lat: DecimalMinusTextField!
     @IBOutlet weak var p1Lng: DecimalMinusTextField!
     @IBOutlet weak var p2Lat: DecimalMinusTextField!
@@ -29,7 +32,33 @@ class ViewController: UIViewController, HistoryViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = BACKGROUND_COLOR
+        self.ref = Database.database().reference()
+        self.registerForFireBaseUpdates()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    fileprivate func registerForFireBaseUpdates()
+    {
+        self.ref!.child("history").observe(.value, with: { snapshot in
+            if let postDict = snapshot.value as? [String : AnyObject] {
+                var tmpItems = [LocationLookup]()
+                for (_,val) in postDict.enumerated() {
+                    let entry = val.1 as! Dictionary<String,AnyObject>
+                    let timestamp = entry["timestamp"] as! String?
+                    let origLat = entry["origLat"] as! Double?
+                    let origLng = entry["origLng"] as! Double?
+                    let destLat = entry["destLat"] as! Double?
+                    let destLng = entry["destLng"] as! Double?
+                    
+                    tmpItems.append(LocationLookup(origLat: origLat!,
+                                                   origLng: origLng!, destLat: destLat!,
+                                                   destLng: destLng!,
+                                                   timestamp: (timestamp?.dateFromISO8601)!))
+                }
+                self.entries = tmpItems
+            }
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +76,11 @@ class ViewController: UIViewController, HistoryViewControllerDelegate {
         let distance = p1.distance(from: p2)
         let bearing = p1.bearingToPoint(point: p2)
         
-        entries.append(LocationLookup(origLat: p1lt, origLng: p1ln, destLat: p2lt, destLng: p2ln, timestamp: Date()))
+        //entries.append(LocationLookup(origLat: p1lt, origLng: p1ln, destLat: p2lt, destLng: p2ln, timestamp: Date()))
+        let entry = LocationLookup(origLat: p1lt, origLng: p1ln, destLat: p2lt,
+                                   destLng: p2ln, timestamp: Date())
+        let newChild = self.ref?.child("history").childByAutoId()
+        newChild?.setValue(self.toDictionary(vals: entry))
         
         if distanceUnits == "Kilometers" {
             self.distanceLabel.text = "Distance: \((distance / 10.0).rounded() / 100.0) kilometers"
@@ -60,6 +93,16 @@ class ViewController: UIViewController, HistoryViewControllerDelegate {
         } else {
             self.bearingLabel.text = "Bearing: \((bearing * 1777.7777777778).rounded() / 100.0) mils."
         }
+    }
+    
+    func toDictionary(vals: LocationLookup) -> NSDictionary {
+        return [
+            "timestamp": NSString(string: (vals.timestamp.iso8601)),
+            "origLat" : NSNumber(value: vals.origLat),
+            "origLng" : NSNumber(value: vals.origLng),
+            "destLat" : NSNumber(value: vals.destLat),
+            "destLng" : NSNumber(value: vals.destLng),
+        ]
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
@@ -133,5 +176,36 @@ extension ViewController: LocationSearchDelegate {
         self.p2Lat.text = "\(calculationData.destLat)"
         self.p2Lng.text = "\(calculationData.destLng)"
         self.doCalculatations()
+    }
+}
+
+extension Date {
+    struct Formatter2 {
+        static let iso8601: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.calendar = Calendar(identifier: .iso8601)
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSxxx"
+            return formatter
+        }()
+        
+        static let short: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd"
+            return formatter
+        }()
+    }
+    
+    var short2: String {
+        return Formatter.short.string(from: self)
+    }
+    
+    var iso8601: String {
+        return Formatter2.iso8601.string(from: self)
+    }
+}
+
+extension String {
+    var dateFromISO8601: Date? {
+        return Date.Formatter2.iso8601.date(from: self)
     }
 }

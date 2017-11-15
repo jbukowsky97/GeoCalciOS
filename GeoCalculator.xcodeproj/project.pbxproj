@@ -13,6 +13,7 @@
 		3353D23A1F955D310030D2C3 /* GeoCalcTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D2391F955D310030D2C3 /* GeoCalcTextField.swift */; };
 		3353D23C1F9560040030D2C3 /* GeoCalcLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D23B1F9560040030D2C3 /* GeoCalcLabel.swift */; };
 		3353D23E1F95606B0030D2C3 /* GeoCalcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3353D23D1F95606B0030D2C3 /* GeoCalcButton.swift */; };
+		3378C5211FBC2BA400A2ED43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3378C5201FBC2BA400A2ED43 /* GoogleService-Info.plist */; };
 		33B7AD9E1FAA4853000FB7BF /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B7AD9D1FAA4853000FB7BF /* LocationSearchViewController.swift */; };
 		632FDFCE69641CF944E466E0 /* Pods_GeoCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40445DEBFD4930ACA4E77BE8 /* Pods_GeoCalculatorTests.framework */; };
 		81F9FF14B8BF04A1CA6EEE03 /* Pods_GeoCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC733C3E1D1D4CD07321671 /* Pods_GeoCalculator.framework */; };
@@ -56,6 +57,7 @@
 		3353D2391F955D310030D2C3 /* GeoCalcTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCalcTextField.swift; sourceTree = "<group>"; };
 		3353D23B1F9560040030D2C3 /* GeoCalcLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCalcLabel.swift; sourceTree = "<group>"; };
 		3353D23D1F95606B0030D2C3 /* GeoCalcButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCalcButton.swift; sourceTree = "<group>"; };
+		3378C5201FBC2BA400A2ED43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		33B7AD9D1FAA4853000FB7BF /* LocationSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
 		37CBCB12B26011C2330ADB6A /* Pods-GeoCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoCalculatorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoCalculatorUITests/Pods-GeoCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		40445DEBFD4930ACA4E77BE8 /* Pods_GeoCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +162,7 @@
 				9EDE87EA1E36AC2C00C2F900 /* Assets.xcassets */,
 				9EDE87EC1E36AC2C00C2F900 /* LaunchScreen.storyboard */,
 				9EDE87EF1E36AC2C00C2F900 /* Info.plist */,
+				3378C5201FBC2BA400A2ED43 /* GoogleService-Info.plist */,
 				9EC2C62E1E4A690B009BC940 /* SettingsViewController.swift */,
 				3353D2391F955D310030D2C3 /* GeoCalcTextField.swift */,
 				3353D23B1F9560040030D2C3 /* GeoCalcLabel.swift */,
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EDE87EE1E36AC2C00C2F900 /* LaunchScreen.storyboard in Resources */,
+				3378C5211FBC2BA400A2ED43 /* GoogleService-Info.plist in Resources */,
 				9EDE87EB1E36AC2C00C2F900 /* Assets.xcassets in Resources */,
 				9EDE87E91E36AC2C00C2F900 /* Main.storyboard in Resources */,
 			);
